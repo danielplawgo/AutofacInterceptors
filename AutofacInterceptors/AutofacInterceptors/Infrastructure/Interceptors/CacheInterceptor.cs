@@ -80,7 +80,7 @@ namespace AutofacInterceptors.Infrastructure.Interceptors
 
         private string KeyFromParameter(IInvocation invocation, int? id)
         {
-            return $"{invocation.TargetType.FullName}-{invocation.Method.Name}-{id}";
+            return $"{invocation.TargetType.FullName}-{id}";
         }
 
         private string KeyFromObject(IInvocation invocation)
@@ -92,7 +92,7 @@ namespace AutofacInterceptors.Infrastructure.Interceptors
                 throw new ArgumentException("Wrong parameter type");
             }
 
-            return $"{invocation.TargetType.FullName}-{invocation.Method.Name}-{model.Id}";
+            return $"{invocation.TargetType.FullName}-{model.Id}";
         }
     }
 }
